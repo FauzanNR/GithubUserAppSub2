@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group>
+        <item
+            android:id="@+id/fav_btn_detail"
+            android:icon="@drawable/ic_baseline_favorite_24"
+            android:title="fav_menu"
+            app:showAsAction="ifRoom" />
+        <item
+            android:id="@+id/setting_btn"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="setting"
+            app:showAsAction="ifRoom" />
+    </group>
+</menu>

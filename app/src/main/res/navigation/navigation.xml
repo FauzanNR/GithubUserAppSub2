@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/followContainerFragment"
+        android:name="com.app.githubuserappsub2.fragments.FollowContainerFragment"
+        android:label="fragment_follow_container"
+        tools:layout="@layout/fragment_follow_container">
+        <action
+            android:id="@+id/action_followContainerFragment_to_followerFragment"
+            app:destination="@id/followerFragment" />
+        <action
+            android:id="@+id/action_followContainerFragment_to_followingFragment"
+            app:destination="@id/followingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.app.githubuserappsub2.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_detailUserFragment"
+            app:destination="@id/detailUserFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailUserFragment"
+        android:name="com.app.githubuserappsub2.fragments.DetailUserFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail_user">
+        <action
+            android:id="@+id/action_detailUserFragment_to_followContainerFragment"
+            app:destination="@id/followContainerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/followerFragment"
+        android:name="com.app.githubuserappsub2.fragments.FollowerFragment"
+        android:label="FollowerFragment" />
+    <fragment
+        android:id="@+id/followingFragment"
+        android:name="com.app.githubuserappsub2.fragments.FollowingFragment"
+        android:label="fragment_following"
+        tools:layout="@layout/fragment_following" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.app.githubuserappsub2.fragments.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailUserFragment"
+            app:destination="@id/detailUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.app.githubuserappsub2.preference.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
